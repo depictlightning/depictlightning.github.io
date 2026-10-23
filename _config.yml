@@ -1,0 +1,6 @@
+title: depictlightning
+description: 推理加速、框架与卸载，以及偶尔的随笔
+lang: zh-CN
+url: https://depictlightning.github.io
+permalink: /:categories/:year/:month/:day/:title/
+markdown: kramdown

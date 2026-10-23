@@ -1,0 +1,24 @@
+---
+layout: default
+title: 随笔
+permalink: /essays/
+---
+<header class="archive-heading essay-heading">
+  <p class="eyebrow">02 / ESSAYS</p>
+  <h1>随笔</h1>
+  <p>在技术之外，给阅读、行路与日常留下一点慢下来的时间。</p>
+</header>
+{% assign essay_posts = site.categories.essay %}
+{% if essay_posts.size > 0 %}
+  <div class="entry-list archive-list">
+    {% for post in essay_posts %}
+      <a class="entry" href="{{ post.url | relative_url }}">
+        <span class="entry-date">{{ post.date | date: '%Y.%m.%d' }}</span>
+        <span class="entry-title">{{ post.title | escape }}</span>
+        <span class="entry-arrow" aria-hidden="true">↗</span>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="empty-note">随笔尚未落笔。秋天会为它留一张空白的纸。</p>
+{% endif %}

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="post-page">
+  <header class="post-heading">
+    <p class="eyebrow">{% if page.categories contains 'essay' %}随笔 / ESSAY{% else %}研究笔记 / RESEARCH{% endif %}</p>
+    <h1>{{ page.title | escape }}</h1>
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y 年 %m 月 %d 日' }}</time>
+  </header>
+  <div class="prose">{{ content }}</div>
+  <a class="back-link" href="{% if page.categories contains 'essay' %}{{ '/essays/' | relative_url }}{% else %}{{ '/research/' | relative_url }}{% endif %}">← 返回栏目</a>
+</article>

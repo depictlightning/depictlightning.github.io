@@ -1,0 +1,24 @@
+---
+layout: default
+title: 研究笔记
+permalink: /research/
+---
+<header class="archive-heading">
+  <p class="eyebrow">01 / RESEARCH</p>
+  <h1>研究笔记</h1>
+  <p>从推理框架与卸载出发，记录系统为何快、为何慢，以及哪些结论经得起复现。</p>
+</header>
+{% assign research_posts = site.categories.research %}
+{% if research_posts.size > 0 %}
+  <div class="entry-list archive-list">
+    {% for post in research_posts %}
+      <a class="entry" href="{{ post.url | relative_url }}">
+        <span class="entry-date">{{ post.date | date: '%Y.%m.%d' }}</span>
+        <span class="entry-title">{{ post.title | escape }}</span>
+        <span class="entry-arrow" aria-hidden="true">↗</span>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="empty-note">研究笔记尚在整理。第一个问题，很快会写在这里。</p>
+{% endif %}
