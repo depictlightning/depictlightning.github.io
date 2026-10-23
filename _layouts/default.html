@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#172d38">
+    <meta name="theme-color" content="#1f3a34">
     <title>{% if page.title and page.title != '首页' %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
   </head>
-  <body>
+  <body{% if page.url == '/' %} class="home-page"{% endif %}>
     <a class="skip-link" href="#main">跳到正文</a>
     <div class="site-shell">
       <header class="site-header">
@@ -23,7 +23,7 @@
       <main id="main">{{ content }}</main>
 
       <footer class="site-footer">
-        <p>永远充满好奇心。<span aria-hidden="true"> ✦ </span>持续记录，继续追问。</p>
+        <p>{% if page.url == '/' %}depictlightning · 研究笔记与随笔{% else %}永远充满好奇心。<span aria-hidden="true"> ✦ </span>持续记录，继续追问。{% endif %}</p>
         <a href="https://github.com/depictlightning">GitHub ↗</a>
       </footer>
     </div>
