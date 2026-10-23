@@ -85,7 +85,8 @@ body::after {
   mix-blend-mode: multiply;
 }
 
-body.home-page { font-family: var(--serif); }
+/* 意象模块：均匀的羊皮纸左侧，右侧保留少量旧纸色差与 4.5% 颗粒。 */
+body.home-page { font-family: var(--serif); background-color: var(--paper); background-image: linear-gradient(180deg, #614b301c, transparent 100px, transparent calc(100% - 100px), #614b301c), linear-gradient(270deg, #614b301c, transparent 100px), radial-gradient(ellipse 35% 28% at 88% 74%, #9d794923, transparent 80%), linear-gradient(90deg, #e8dcc4, #e9ddc6 55%, #e4d4b8); }
 body.home-page .site-shell { max-width: 1440px; padding: 0 5.5%; }
 body.home-page .site-header { position: relative; z-index: 5; border-color: #b5a789; }
 body.home-page .site-nav a { color: #43584d; }
@@ -94,163 +95,94 @@ body.home-page .site-nav a[aria-current] { color: #7a2e2e; }
 
 /* 意象模块：雨季开场、拱门里的秋海与标题残影。 */
 .home-hero { position: relative; display: grid; grid-template-columns: 55% 45%; min-height: 690px; border-bottom: 1px solid var(--line); isolation: isolate; }
+/* 意象模块：插图越过画框时投在纸上的轻微阴影。 */
+.home-hero::before { content: ''; position: absolute; z-index: -1; top: 4%; bottom: 4%; left: calc(55% - 3.5rem); width: 5rem; pointer-events: none; background: linear-gradient(90deg, transparent, #1f3a3438 65%, transparent); filter: blur(15px); }
 .home-hero-copy { position: relative; z-index: 3; align-self: center; padding: 5rem 2rem 6rem 0; }
 .home-hero .eyebrow { color: #76532c; }
 .hero-number { margin: 4rem 0 .3rem; color: #50615a; font: .7rem var(--sans); letter-spacing: .25em; }
 .rain-title { margin: 0 0 1.8rem; color: #1f3a34; font-size: clamp(3.1rem, 4.5vw, 5.2rem); font-weight: 500; letter-spacing: -.065em; line-height: 1.35; white-space: nowrap; }
-.rain-title em { position: relative; color: #7a2e2e; font-style: normal; }
-.rain-title em::after { content: attr(data-echo); position: absolute; inset: 0; z-index: -1; color: #7a2e2e; opacity: .22; filter: blur(6px); transform: translate(.055em, .12em); }
+.rain-title em { position: relative; color: #263f4a; font-style: normal; }
+.rain-title em::after { content: attr(data-echo); position: absolute; inset: 0; z-index: -1; color: #263f4a; opacity: .22; filter: blur(6px); transform: translate(.055em, .12em); }
 .hero-lede { margin-bottom: 1.3rem; color: #76532c; font: 500 1.23rem var(--serif); letter-spacing: .12em; }
 .hero-description { max-width: 33rem; margin-bottom: 2rem; color: #40534e; font-size: .96rem; line-height: 2.2; }
 .home-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.8rem; }
 .home-hero .button-primary { display: inline-flex; gap: 2.2rem; align-items: center; background: #1f3a34; padding: .85rem 1.3rem; }
 .home-hero .button-primary:hover { background: #2e5347; }
 .home-hero .text-link { color: #345249; }
-.hero-art { position: relative; align-self: stretch; min-height: 630px; overflow: hidden; background: radial-gradient(circle at 58% 31%, #526052 0%, #273d3b 35%, #101a2c 100%); box-shadow: inset 0 0 0 1px #a38b5d66; }
-.hero-art::before { content: ''; position: absolute; inset: 0; opacity: .17; background: repeating-linear-gradient(96deg, transparent 0 29px, #c5c6aa 30px, transparent 31px); }
+/* 意象模块：插图以柔和渗色越过纸面，不再使用锯齿裁切。 */
+.hero-art { position: relative; align-self: stretch; min-height: 630px; margin-left: -1.25rem; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 24px); background: radial-gradient(circle at 58% 31%, #526052 0%, #273d3b 35%, #101a2c 100%); box-shadow: inset 0 0 0 1px #a38b5d66; }
+.hero-art::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 42px 105px at 0 21%, #e8dcc47a, transparent 78%), radial-gradient(ellipse 33px 80px at 0 57%, #e8dcc46b, transparent 78%), radial-gradient(ellipse 44px 95px at 0 86%, #e8dcc47a, transparent 78%), repeating-linear-gradient(96deg, transparent 0 29px, #c5c6aa2b 30px, transparent 31px); }
 .hero-art::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 80px #0c1425a8; pointer-events: none; }
 .art-halo { position: absolute; width: 60%; aspect-ratio: 1; top: 13%; left: 21%; border-radius: 50%; background: radial-gradient(circle, #d4b773b8 0 17%, #bb9a6780 30%, transparent 70%); filter: blur(8px); }
 .art-arch { position: absolute; left: 16%; right: 16%; top: 12%; bottom: 13%; overflow: hidden; border: 17px solid #25433e; border-bottom: 0; border-radius: 49% 49% 0 0; box-shadow: inset 0 0 0 2px #c4a775, 0 15px 45px #080f1db3; background: linear-gradient(180deg, #435957 0%, #a09974 49%, #d7b877 66%, #3e6268 72%, #142c3e 100%); }
 .art-arch::before { content: ''; position: absolute; left: 12%; right: 12%; top: 40%; height: 1px; background: #f2d5a0; box-shadow: 0 0 32px 13px #e6bb75a8; }
-.art-sea { position: absolute; inset: 65% 0 0; opacity: .7; background: repeating-linear-gradient(177deg, #163440 0 9px, #4d6b69 10px 11px, #bda57a 12px 13px, #29494e 14px 23px); }
+/* 意象模块：左框 2px 错位与轻微倾斜的海平线。 */
+.arch-fault { position: absolute; z-index: 2; left: calc(16% - 2px); top: 47%; width: 17px; height: 27px; background: #25433e; box-shadow: 2px 1px 0 #102d2b80; transform: translateX(-2px); }
+.art-sea { position: absolute; inset: 65% -3% -3%; opacity: .7; background: repeating-linear-gradient(177deg, #163440 0 9px, #4d6b69 10px 11px, #bda57a 12px 13px, #29494e 14px 23px); transform: rotate(-1.5deg); transform-origin: center top; }
+.art-sea::before { content: ''; position: absolute; inset: 0 0 auto; height: 2px; background: #ebd2a777; box-shadow: 0 0 9px #dfc9966b; }
+/* 意象模块：远处秃鹫、异化冰块与破碎倒影。 */
+.art-vulture { position: absolute; z-index: 2; top: 22%; left: 63%; width: 26px; height: 11px; fill: #08171b; opacity: .3; animation: vulture-circle 38s ease-in-out infinite; }
+.art-ice-glow { position: absolute; z-index: 2; left: 45%; top: 55%; width: 90px; height: 90px; border-radius: 50%; background: radial-gradient(circle, #dcefe488, #badbd133 42%, transparent 72%); filter: blur(10px); animation: ice-glow 11s ease-in-out infinite; }
+.art-ice { position: absolute; z-index: 3; left: 52%; top: 60%; width: 43px; height: 46px; border: 1px solid #e2f4eaae; clip-path: polygon(13% 0, 88% 8%, 100% 78%, 79% 100%, 2% 84%, 0 18%); background: linear-gradient(132deg, #eaf9efb5, #83afad86 42%, #365767a3 76%, #d5e9e1a8); box-shadow: inset 7px 7px 13px #f4ffed70, inset -7px -10px 15px #1937478c, 0 0 24px 9px #cce7e65c; transform: rotate(-7deg); animation: ice-breath 11s ease-in-out infinite; }
+.art-ice::before { content: ''; position: absolute; left: 42%; top: 37%; width: 3px; height: 16px; border-radius: 50%; background: #20333f91; filter: blur(2px); transform: rotate(19deg); }
+.art-ice::after { content: ''; position: absolute; inset: 5px 9px 8px 6px; border-left: 1px solid #f4ffefe0; border-top: 1px solid #f4ffefe0; transform: skewY(6deg); }
+.art-ice-reflection { position: absolute; z-index: 2; left: 41%; top: 72%; width: 98px; height: 31px; opacity: .38; background: repeating-linear-gradient(176deg, transparent 0 5px, #d7eee091 6px 7px, transparent 8px 13px); mask-image: radial-gradient(ellipse, #000 18%, transparent 73%); transform: rotate(-1.5deg); }
 .art-star { position: absolute; z-index: 1; color: #c9ab6c; font-size: 2rem; text-shadow: 0 0 18px #dec888; }
 .art-star-one { right: 13%; top: 18%; }
 .art-star-two { left: 9%; top: 49%; font-size: .75rem; }
 .art-caption { position: absolute; z-index: 2; left: 8%; bottom: 4%; color: #d1c09b; font: .68rem/1.7 var(--serif); letter-spacing: .23em; }
-.hero-side-note { position: absolute; z-index: 4; left: 0; bottom: 1.4rem; color: #7e795d; font: .65rem var(--sans); letter-spacing: .2em; }
-.hero-side-note span { padding-left: .7rem; }
 
-/* 意象模块：36 只缓慢飘落的黄蝴蝶，CSS 双翼代替图片。 */
+/* 意象模块：纸面近中缝处留两处极淡霉渍与暖光。 */
+.seam-atmosphere { position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; }
+.seam-atmosphere::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 72px 38px at 46% 24%, #344d3b17, transparent 82%), radial-gradient(ellipse 56px 94px at 49% 79%, #314c3a14, transparent 82%), radial-gradient(ellipse 200px 250px at 55% 53%, #d6aa6830, transparent 78%); }
+/* 意象模块：12 只沾湿的黄蝴蝶，从冰附近挣扎着向左游移。 */
 .butterfly-field { position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; }
-.butterfly-particle { position: absolute; left: var(--x); top: -2rem; width: var(--size); height: var(--size); opacity: .44; animation: butterfly-fall var(--duration) ease-in-out var(--delay) infinite; }
+.butterfly-particle { position: absolute; left: var(--x); top: var(--y); width: var(--size); height: var(--size); opacity: 0; animation: butterfly-drift var(--duration) ease-in-out var(--delay) infinite; }
 .butterfly-particle::before,
-.butterfly-particle::after { content: ''; position: absolute; top: 0; width: 60%; height: 90%; background: #b08d57; border-radius: 80% 25% 70% 35%; box-shadow: 0 0 1px #6f542d; animation: butterfly-wing 2.5s ease-in-out infinite alternate; }
+.butterfly-particle::after { content: ''; position: absolute; top: 0; width: 60%; height: 90%; background: #cfab52; border-radius: 80% 25% 70% 35%; filter: blur(.25px); animation: butterfly-wing 6s ease-in-out infinite alternate; }
 .butterfly-particle::before { right: 50%; transform-origin: right bottom; }
-.butterfly-particle::after { left: 50%; transform-origin: left bottom; animation-delay: -1.25s; }
-@keyframes butterfly-fall { from { transform: translate3d(-20px, -20px, 0) rotate(-20deg); } to { transform: translate3d(65px, 760px, 0) rotate(30deg); } }
-@keyframes butterfly-wing { from { transform: rotate(-22deg) scaleX(.7); } to { transform: rotate(26deg) scaleX(1); } }
+.butterfly-particle::after { left: 50%; transform-origin: left bottom; animation-delay: -3s; }
+@keyframes butterfly-drift { 0%, 100% { opacity: 0; transform: translate3d(0, 0, 0) rotate(-7deg); } 15% { opacity: .58; } 29% { transform: translate3d(-3vw, -5px, 0) rotate(7deg); } 53% { transform: translate3d(-6vw, 9px, 0) rotate(-4deg); } 76% { transform: translate3d(-9vw, 2px, 0) rotate(5deg); } 86% { opacity: .58; } 99% { transform: translate3d(-12vw, 15px, 0) rotate(-7deg); } }
+@keyframes butterfly-wing { from { transform: rotate(-13deg) scaleX(.75); } to { transform: rotate(19deg) scaleX(1); } }
+@keyframes vulture-circle { 0%, 100% { transform: translate3d(0, 0, 0) rotate(-3deg); } 35% { transform: translate3d(19px, -7px, 0) rotate(4deg); } 70% { transform: translate3d(28px, 3px, 0) rotate(-1deg); } }
+@keyframes ice-breath { 0%, 100% { opacity: .72; box-shadow: inset 7px 7px 13px #f4ffed70, inset -7px -10px 15px #1937478c, 0 0 24px 9px #cce7e65c; } 50% { opacity: .92; box-shadow: inset 7px 7px 13px #f4ffed8c, inset -7px -10px 15px #1937478c, 0 0 33px 13px #d4eeea85; } }
+@keyframes ice-glow { 0%, 100% { opacity: .55; } 50% { opacity: .85; } }
 
-/* 意象模块：谱系式时间轴与缓慢显字。 */
-.home-section { padding: 7.5rem 0; }
-.section-topline { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem 0 0; border-top: 1px solid var(--line); color: #705a3c; font-size: .7rem; letter-spacing: .19em; }
-.section-topline span:last-child { letter-spacing: .11em; }
-.about-layout { display: grid; grid-template-columns: minmax(0, 47fr) minmax(0, 53fr); gap: 3rem; margin-top: 4.8rem; }
-.about-heading h2,
-.latest-heading h2 { margin: 1.2rem 0 0; color: #213b35; font-size: clamp(2.3rem, 3.6vw, 4rem); font-weight: 500; letter-spacing: -.05em; line-height: 1.5; }
-.about-heading h2 em { color: #7a2e2e; font-style: normal; }
-.time-orbit { position: relative; width: 210px; height: 210px; margin: 3.3rem 0 0 3.5rem; border: 1px solid #b9a787; border-radius: 50%; transform: rotate(-18deg); }
-.time-orbit::before { content: ''; position: absolute; inset: 24px; border: 1px dashed #a99470; border-radius: 50%; }
-.time-orbit::after { content: '↶'; position: absolute; top: 34%; left: 36%; color: #a78959; font: 3rem var(--serif); }
-.time-orbit span { position: absolute; color: #8a6a43; font: .85rem var(--serif); }
-.time-orbit span:nth-child(1) { top: -10px; left: 45%; }
-.time-orbit span:nth-child(2) { right: -10px; top: 49%; }
-.time-orbit span:nth-child(3) { bottom: -10px; left: 45%; }
-.about-timeline { position: relative; padding-left: 2.2rem; }
-.about-timeline::before { content: ''; position: absolute; left: 0; top: .7rem; bottom: 5.2rem; width: 1px; background: #b08d57; }
-.timeline-item { position: relative; display: grid; grid-template-columns: 7.6rem 1fr; gap: 1rem; padding: 1.4rem 0 1.7rem; border-bottom: 1px solid #cdbda3; }
-.timeline-item::before { content: ''; position: absolute; top: 1.7rem; left: -2.52rem; width: .6rem; height: .6rem; border: 1px solid #8d7247; border-radius: 50%; background: var(--paper); }
-.timeline-index { color: #705a3c; font: .7rem var(--sans); letter-spacing: .1em; white-space: nowrap; }
-.timeline-item h3 { margin: -.35rem 0 .3rem; font-size: 1.5rem; font-weight: 500; }
-.timeline-item p { margin: 0; max-width: 26rem; color: #54645a; font-size: .89rem; line-height: 1.9; }
-.about-links { display: flex; gap: 2rem; margin-top: 2.2rem; font-size: .9rem; }
-.about-links a { border-bottom: 1px solid #b08d57; padding-bottom: .2rem; }
-.about-links a:hover { color: #7a2e2e; }
-.has-reveal .reveal-line { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateY(12px); transition: opacity 1.25s ease-in-out, clip-path 1.45s ease-in-out, transform 1.25s ease-in-out; }
-.has-reveal .reveal-line.is-visible { opacity: 1; clip-path: inset(0); transform: none; }
-
-/* 意象模块：风吹纸页，悬停时边缘浮出一小段焦痕。 */
-.home-latest { padding-top: 1.5rem; }
-.latest-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin: 4.2rem 0 2.5rem; }
-.latest-heading h2 { font-size: clamp(2.2rem, 3.3vw, 3.6rem); }
-.latest-count { padding-bottom: .45rem; color: #705a3c; font: .7rem var(--sans); letter-spacing: .16em; white-space: nowrap; }
-.paper-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; }
-.paper-card,
-.paper-empty { position: relative; overflow: hidden; min-height: 260px; padding: 2rem; border: 1px solid #beae91; background: #efe3cd; box-shadow: 2px 5px 16px #6f5b3a13; }
-.paper-card { display: flex; flex-direction: column; transition: transform 1s ease-in-out, box-shadow 1s ease-in-out; }
-.paper-card::after { content: ''; position: absolute; inset: -1px; pointer-events: none; opacity: 0; background: radial-gradient(ellipse 27px 65px at 100% 48%, #69412a92, transparent 80%); transition: opacity 1s ease-in-out; }
-.paper-card:hover,
-.paper-card:focus-visible { transform: rotate(-1.2deg) translateY(-5px); box-shadow: 7px 15px 27px #57462938; }
-.paper-card:hover::after,
-.paper-card:focus-visible::after { opacity: 1; }
-.paper-meta { color: #76532c; font: .68rem var(--sans); letter-spacing: .17em; }
-.paper-card strong { display: block; margin: 3rem 0 1.8rem; color: #284039; font: 500 1.55rem/1.5 var(--serif); }
-.paper-read { display: flex; justify-content: space-between; margin-top: auto; padding-top: .9rem; border-top: 1px solid #c9b99b; color: #7d5932; font-size: .82rem; }
-.paper-empty { display: flex; flex-direction: column; justify-content: center; width: min(100%, 600px); min-height: 225px; }
-.paper-empty::before { content: ''; position: absolute; right: -2rem; top: -2rem; width: 9rem; height: 9rem; border: 1px solid #c9b795; border-radius: 50%; box-shadow: 0 0 0 2rem #efe3cd, 0 0 0 calc(2rem + 1px) #c9b795; opacity: .45; }
-.paper-empty p { position: relative; margin: 2rem 0 1.4rem; font: 500 1.26rem var(--serif); }
-.paper-empty div { position: relative; display: flex; flex-wrap: wrap; gap: 1.8rem; }
-.paper-empty a { border-bottom: 1px solid #ae8446; color: #7d5932; font-size: .85rem; }
-
-/* 意象模块：冰块只以内光回应，不承载句子。 */
-.ice-section { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: 500px; margin: 1rem 0 7rem; padding: 4.5rem 6.5%; overflow: hidden; background: radial-gradient(circle at 75% 50%, #355559 0%, #203c3d 30%, #101a2c 75%); color: #eee4cf; }
-.ice-section::before { content: ''; position: absolute; inset: 0; opacity: .08; background: repeating-linear-gradient(90deg, transparent 0 35px, #b5c6c1 36px, transparent 37px); }
-.ice-copy { position: relative; z-index: 1; }
-.ice-copy .eyebrow { color: #c8aa72; }
-.ice-copy h2 { margin: 2rem 0 1.2rem; font-size: clamp(2.7rem, 4vw, 4.2rem); font-weight: 500; letter-spacing: -.05em; line-height: 1.4; }
-.ice-asterisk { display: block; margin-top: 2.8rem; color: #bd9d65; font-size: 1.8rem; }
-.ice-space { position: relative; z-index: 1; display: grid; justify-items: center; align-items: center; min-height: 350px; }
-.ice-cube { position: relative; display: grid; place-items: center; width: 225px; height: 225px; padding: 1.5rem; border: 1px solid #e9ffff9c; border-radius: 3px; color: #f7f5e9; font: 500 1.13rem/1.75 var(--serif); text-align: center; cursor: pointer; background: linear-gradient(145deg, #e5f3ed72 0%, #6a9da68a 31%, #5a829864 62%, #e0f0e291 100%); box-shadow: inset 8px 8px 30px #f9fff473, inset -15px -20px 35px #1835509c, 0 0 55px #c4d9cc36, 17px 23px 34px #080f20a3; transform: rotate(-5deg); transition: transform 1.3s ease-in-out, box-shadow 1.3s ease-in-out; }
-.ice-cube::before { content: ''; position: absolute; inset: 9px; border: 1px solid #d7f3eda3; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-.ice-cube::after { content: ''; position: absolute; left: 5%; right: 5%; top: 13%; height: 1px; background: #ffffffad; transform: rotate(-14deg); box-shadow: 0 0 20px 7px #d0e8de73; }
-.ice-space:hover .ice-cube,
-.ice-cube:focus,
-.ice-cube:active { transform: rotate(-2deg) scale(1.035); box-shadow: inset 8px 8px 30px #f9fff49a, inset -15px -20px 35px #1835508c, 0 0 75px #d6e9dd8c, 17px 23px 34px #080f20a3; }
-.ice-facet { position: absolute; inset: 0; background: linear-gradient(120deg, transparent 24%, #e8f9f243 38%, transparent 51%), linear-gradient(40deg, transparent 56%, #ffffff2c 57%, transparent 61%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-
-/* 意象模块：页脚细雨，保持留白。 */
-body.home-page .site-footer { position: relative; min-height: 170px; overflow: hidden; border-color: #b5a789; }
-body.home-page .site-footer::before { content: ''; position: absolute; inset: -100% 0 0; pointer-events: none; opacity: .09; background: repeating-linear-gradient(100deg, transparent 0 35px, #455e59 36px, transparent 37px); animation: footer-rain 22s ease-in-out infinite; }
-body.home-page .site-footer > * { position: relative; z-index: 1; }
+body.home-page .site-footer { position: relative; min-height: 170px; border-color: #b5a789; }
 body.home-page .site-footer p { color: #5a5d4c; font: italic 1.08rem var(--serif); letter-spacing: .09em; }
-@keyframes footer-rain { to { transform: translateY(50%); } }
+/* 意象模块：页脚一处极淡的旧血红斑痕。 */
+body.home-page .site-footer::before { content: ''; position: absolute; right: 13%; top: 36%; width: 28px; height: 19px; pointer-events: none; border-radius: 61% 39% 53% 47%; background: radial-gradient(ellipse at 42% 52%, #7a2e2e52, #7a2e2e12 58%, transparent 78%); transform: rotate(-22deg); }
 
 @media (max-width: 1040px) {
   .home-hero { grid-template-columns: 58% 42%; }
+  .home-hero::before { left: calc(58% - 3.5rem); }
   .rain-title { font-size: clamp(2.7rem, 4.7vw, 4rem); }
   .hero-art { min-height: 570px; }
-  .about-layout { grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); gap: 1.5rem; }
-  .ice-section { padding: 4rem; }
 }
 @media (max-width: 760px) {
   body.home-page .site-shell { padding: 0 6%; }
   .home-hero { display: flex; flex-direction: column; min-height: 0; }
-  .butterfly-field { display: none; }
+  .home-hero::before { display: none; }
+  .butterfly-field { inset: auto 0 3.7rem; height: 420px; }
+  .butterfly-particle { left: var(--x-mobile); }
+  .butterfly-particle:nth-child(n + 5) { display: none; }
+  .seam-atmosphere { display: none; }
   .home-hero-copy { padding: 4rem 0 2.5rem; }
   .hero-number { margin-top: 2.8rem; }
   .rain-title { font-size: clamp(2.5rem, 8vw, 4.1rem); white-space: normal; }
   .hero-description { font-size: .92rem; }
-  .hero-art { min-height: 420px; margin-bottom: 3.7rem; }
+  .hero-art { min-height: 420px; margin-left: 0; margin-bottom: 3.7rem; mask-image: none; }
   .art-arch { left: 21%; right: 21%; border-width: 14px; }
-  .hero-side-note { bottom: 1.5rem; }
-  .home-section { padding: 4.3rem 0; }
-  .about-layout { display: block; margin-top: 3rem; }
-  .time-orbit { width: 135px; height: 135px; margin: 2rem 0 3rem 2rem; }
-  .time-orbit::before { inset: 16px; }
-  .time-orbit::after { font-size: 2rem; }
-  .about-timeline { padding-left: 1.4rem; }
-  .timeline-item { grid-template-columns: 1fr; gap: .65rem; }
-  .timeline-item::before { left: -1.72rem; }
-  .about-links { gap: 1rem; }
-  .home-latest { padding-top: 1rem; }
-  .latest-heading { display: block; margin-top: 3rem; }
-  .latest-count { display: block; margin-top: 1.5rem; }
-  .paper-grid { grid-template-columns: 1fr; }
-  .paper-card { min-height: 220px; }
-  .ice-section { grid-template-columns: 1fr; gap: 1.2rem; padding: 3rem 1.7rem; margin-bottom: 3rem; }
-  .ice-copy h2 { margin-top: 1rem; font-size: clamp(2rem, 7vw, 3rem); }
-  .ice-asterisk { display: none; }
-  .ice-space { min-height: 300px; }
-  .ice-cube { width: 190px; height: 190px; }
+  .arch-fault { left: calc(21% - 2px); width: 14px; }
   body.home-page .site-footer { min-height: 130px; }
 }
 @media (max-width: 440px) {
   .rain-title { font-size: clamp(2.3rem, 9vw, 3rem); }
   .home-hero-actions { gap: 1.25rem; }
   .hero-art { min-height: 350px; }
-  .about-heading h2,
-  .latest-heading h2 { font-size: 2.25rem; }
+  .butterfly-field { height: 350px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .butterfly-field { display: none; }
-  .has-reveal .reveal-line { opacity: 1; clip-path: none; transform: none; }
+  .butterfly-particle { animation: none !important; opacity: .58; }
+  .butterfly-particle::before, .butterfly-particle::after, .art-vulture, .art-ice, .art-ice-glow { animation: none !important; }
 }
