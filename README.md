@@ -19,7 +19,19 @@ categories: [research]
 正文从这里开始。
 ```
 
-## 云端预览
+## 本地预览
+
+安装 Ruby＋Devkit 后，重新打开终端，在仓库根目录运行：
+
+```powershell
+bundle config set --local path vendor/bundle
+bundle install
+bundle exec jekyll serve --host 127.0.0.1 --port 4000
+```
+
+前两条命令用于首次安装项目依赖；之后只需运行第三条。首页为 `http://127.0.0.1:4000/`，FDE 初稿为 `http://127.0.0.1:4000/oddities/2026/10/25/understanding-fde/`。保存文件后会自动重新生成页面，刷新浏览器即可查看。
+
+## 云端预览（备选）
 
 预览分支为 `preview/fde-first-post`。在 GitHub 切换到该分支，点击 **Code → Codespaces → Create codespace**。
 
