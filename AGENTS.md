@@ -10,9 +10,11 @@
 
 ## 本地预览
 
-- 每次修改完成后默认启动本地预览，并向用户提供可访问的地址；本地预览不等于推送或发布。
+- 每次修改完成后提供可访问的预览地址；预览不等于正式发布。
 - 当前没有文章时，在仓库根目录运行 `python preview.py`，访问 `http://127.0.0.1:4000/`；旧研究归档页为 `http://127.0.0.1:4000/research/`。
-- 添加 `_posts` 文章后改用 Jekyll：`jekyll serve --host 127.0.0.1 --port 4000`，以实际构建结果预览。
+- 添加 `_posts` 文章后使用 Jekyll 的实际构建结果。当前优先在 GitHub Codespaces 中预览，本机无需安装 Ruby 或 WSL。
+- 预览分支为 `preview/fde-first-post`，Codespaces 启动配置位于 `.devcontainer/devcontainer.json`，预览使用 4000 端口。
+- 推送预览分支不会更新正式站；只有用户确认发布后，才合并或推送到 `master`。云端与本地交替编辑前先同步分支。
 
 ## 内容
 

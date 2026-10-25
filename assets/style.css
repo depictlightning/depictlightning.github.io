@@ -41,6 +41,19 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
 .archive-heading h1 { margin: 1.4rem 0; font-size: clamp(2.7rem, 5vw, 4.4rem); }
 .archive-heading > p:last-child { color: #536760; font-size: 1.04rem; line-height: 2; }
 .archive-list { margin: 0 0 8rem; }
+/* 意象模块：异闻录的错位档案线与缓慢浮尘，仅装饰页眉留白。 */
+.oddities-archive .archive-heading { position: relative; isolation: isolate; }
+.oddities-archive .archive-heading::before { content: ''; position: absolute; z-index: -1; pointer-events: none; inset: 2.6rem -1rem 1rem; border-left: 1px solid #b08d5738; background: linear-gradient(90deg, #b08d5710, transparent 65%); transform: rotate(-.7deg); }
+.oddities-archive .archive-heading::after { content: ''; position: absolute; z-index: -1; pointer-events: none; inset: 1.5rem 0; opacity: .55; background: radial-gradient(ellipse 2px 3px at 82% 21%, #b08d57 65%, transparent 75%), radial-gradient(ellipse 1px 2px at 93% 46%, #b08d57 65%, transparent 75%), radial-gradient(ellipse 2px 1px at 71% 72%, #b08d57 65%, transparent 75%), radial-gradient(ellipse 1px 2px at 87% 85%, #b08d57 65%, transparent 75%); animation: archive-dust 24s ease-in-out infinite alternate; }
+.oddities-archive .entry { transition: transform 1.2s ease-in-out, box-shadow 1.2s ease-in-out; }
+.oddities-archive .entry:hover, .oddities-archive .entry:focus-visible { transform: translateX(3px) rotate(-.2deg); box-shadow: -3px 4px 12px #614b3014; }
+@keyframes archive-dust { from { transform: translate3d(0, 5px, 0); opacity: .35; } to { transform: translate3d(-9px, -7px, 0); opacity: .65; } }
+@media (max-width: 760px), (prefers-reduced-motion: reduce) {
+  .oddities-archive .archive-heading::after { animation: none; opacity: .35; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .oddities-archive .entry:hover, .oddities-archive .entry:focus-visible { transform: none; }
+}
 .post-page { max-width: 780px; margin: 0 auto; padding: 6rem 0 8rem; }
 .post-heading { border-bottom: 1px solid var(--line); margin-bottom: 3rem; }
 .post-heading h1 { font-size: clamp(2.2rem, 4vw, 3.7rem); line-height: 1.35; margin: 1.5rem 0; }

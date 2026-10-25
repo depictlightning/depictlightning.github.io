@@ -19,4 +19,20 @@ categories: [research]
 正文从这里开始。
 ```
 
-推送到 `master` 后，GitHub Pages 会自动重新发布网站。站点使用 GitHub Pages 自带的 Jekyll，不需要额外安装主题或构建依赖。
+## 云端预览
+
+预览分支为 `preview/fde-first-post`。在 GitHub 切换到该分支，点击 **Code → Codespaces → Create codespace**。
+
+首次创建时会自动安装 Ruby 依赖并启动 Jekyll，之后打开 **Ports** 面板中 4000 端口的地址即可查看。首页为 `/`，技术异闻录为 `/oddities/`，FDE 初稿为 `/oddities/2026/10/25/understanding-fde/`。
+
+在 Codespaces 中保存文章后，Jekyll 会自动重新生成页面，刷新浏览器即可看到变化，不需要每次提交。若预览服务已停止，在终端运行：
+
+```sh
+bundle exec jekyll serve --host 0.0.0.0 --port 4000
+```
+
+结束后在 GitHub Codespaces 页面停止环境。云端修改要提交并推送到预览分支；返回本地编辑前先同步该分支，避免两边覆盖。
+
+## 发布
+
+推送预览分支不会更新正式站，但公开仓库中的分支和文章草稿仍然公开可见。确认发布后，再把预览分支合并到 `master`；GitHub Pages 会自动重新发布网站。

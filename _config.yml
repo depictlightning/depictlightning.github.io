@@ -4,3 +4,10 @@ lang: zh-CN
 url: https://depictlightning.github.io
 permalink: /:categories/:year/:month/:day/:title/
 markdown: kramdown
+exclude:
+  - AGENTS.md
+  - README.md
+  - preview.py
+  - Gemfile
+  - Gemfile.lock
+  - vendor
