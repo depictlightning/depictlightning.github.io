@@ -5,7 +5,7 @@
 ## 构建与发布
 
 - GitHub Pages 从 `master` 分支的仓库根目录发布。
-- 网站使用 Jekyll、自定义 `_layouts/` 和 `assets/style.css`，没有额外主题包或构建依赖。
+- 网站使用 Jekyll、自定义 `_layouts/` 和 `assets/style.css`，没有额外主题包；本地构建依赖由 `Gemfile` 和 `Gemfile.lock` 管理。
 - 是否提交、推送或发布，以当次请求为准。
 
 ## 本地预览
@@ -13,8 +13,8 @@
 - 每次修改完成后提供可访问的预览地址；预览不等于正式发布。
 - 当前没有文章时，在仓库根目录运行 `python preview.py`，访问 `http://127.0.0.1:4000/`；旧研究归档页为 `http://127.0.0.1:4000/research/`。
 - 添加 `_posts` 文章后使用 Jekyll 的实际构建结果。当前优先使用本地 Ruby，通过 `bundle exec jekyll serve --host 127.0.0.1 --port 4000` 预览；GitHub Codespaces 作为备选，不需要 WSL。
-- 预览分支为 `preview/fde-first-post`，Codespaces 启动配置位于 `.devcontainer/devcontainer.json`，预览使用 4000 端口。
-- 推送预览分支不会更新正式站；只有用户确认发布后，才合并或推送到 `master`。云端与本地交替编辑前先同步分支。
+- 当前日常使用 `master` 本地预览；需要隔离草稿时再创建临时分支。Codespaces 启动配置位于 `.devcontainer/devcontainer.json`，预览使用 4000 端口。
+- 只有用户确认发布后，才合并或推送到 `master`。云端与本地交替编辑前先同步同一分支。
 
 ## 内容
 
