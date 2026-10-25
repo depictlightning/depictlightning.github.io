@@ -18,6 +18,7 @@
 
 - 首页身份表述以现有页面为准，不自行添加个人经历、成果或身份信息。
 - 技术笔记归入 `research`，随笔归入 `essay`。
+- 技术异闻录归入 `oddities`，用于冷门工具、非常规技巧与奇怪的技术实验；栏目地址为 `/oddities/`。
 - 新文章放在 `_posts/YYYY-MM-DD-title.md`，front matter 使用 `layout: post` 和对应的 `categories`。
 - 不自行添加小说原文或装饰性文学短句。
 

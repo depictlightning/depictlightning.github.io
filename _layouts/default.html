@@ -15,7 +15,8 @@
         <a class="brand" href="{{ '/' | relative_url }}" aria-label="depictlightning 首页">depict<span class="brand-mark">✦</span>lightning</a>
         <nav class="site-nav" aria-label="主导航">
           <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>首页</a>
-          <a href="https://ai-infra-wiki-erx.pages.dev/" aria-label="学习笔记 Wiki（外部站点）">学习笔记 Wiki ↗</a>
+          <a href="https://ai-infra-wiki-erx.pages.dev/" aria-label="研究笔记 Wiki（外部站点）">研究笔记 Wiki ↗</a>
+          <a href="{{ '/oddities/' | relative_url }}"{% if page.url == '/oddities/' %} aria-current="page"{% endif %}>技术异闻录</a>
           <a href="{{ '/essays/' | relative_url }}"{% if page.url == '/essays/' %} aria-current="page"{% endif %}>随笔</a>
         </nav>
       </header>
@@ -23,7 +24,7 @@
       <main id="main">{{ content }}</main>
 
       <footer class="site-footer">
-        <p>{% if page.url == '/' %}depictlightning · 学习笔记 Wiki 与随笔{% else %}永远充满好奇心。<span aria-hidden="true"> ✦ </span>持续记录，继续追问。{% endif %}</p>
+        <p>{% if page.url == '/' %}depictlightning · 研究笔记 Wiki 与随笔{% else %}永远充满好奇心。<span aria-hidden="true"> ✦ </span>持续记录，继续追问。{% endif %}</p>
         <a href="https://github.com/depictlightning">GitHub ↗</a>
       </footer>
     </div>

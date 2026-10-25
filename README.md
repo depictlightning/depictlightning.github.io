@@ -1,12 +1,12 @@
 # depictlightning
 
-个人博客：推理加速、框架与卸载方向的[学习笔记 Wiki](https://ai-infra-wiki-erx.pages.dev/)，以及单独的随笔栏目。
+个人博客：推理加速、框架与卸载方向的[研究笔记 Wiki](https://ai-infra-wiki-erx.pages.dev/)、收集冷门工具与奇怪技术的「技术异闻录」，以及随笔栏目。
 
 网站地址：https://depictlightning.github.io
 
 ## 写一篇新文章
 
-在 `_posts/` 下创建 `YYYY-MM-DD-title.md`。研究笔记使用 `categories: [research]`，随笔使用 `categories: [essay]`。例如：
+在 `_posts/` 下创建 `YYYY-MM-DD-title.md`。研究笔记使用 `categories: [research]`，技术异闻录使用 `categories: [oddities]`，随笔使用 `categories: [essay]`。例如：
 
 ```markdown
 ---

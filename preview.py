@@ -8,7 +8,7 @@ from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parent
-PAGES = {"/": "index.html", "/research/": "research.html", "/essays/": "essays.html"}
+PAGES = {"/": "index.html", "/research/": "research.html", "/oddities/": "oddities.html", "/essays/": "essays.html"}
 ASSETS = {"/assets/style.css": "text/css", "/assets/main.js": "text/javascript"}
 
 

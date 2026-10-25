@@ -61,7 +61,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
 @media (max-width: 760px) {
   .site-shell { padding: 0 6%; }
   .site-header { min-height: 90px; flex-wrap: wrap; align-content: center; gap: .5rem; padding: 1rem 0; }
-  .site-nav { width: 100%; justify-content: space-between; }
+  .site-nav { width: 100%; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1rem; }
   .entry { grid-template-columns: 1fr 1.5rem; gap: .3rem; }
   .entry-date { grid-column: 1; }
   .entry-title { grid-column: 1; grid-row: 2; }
