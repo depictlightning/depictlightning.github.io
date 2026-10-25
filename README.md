@@ -1,6 +1,6 @@
 # depictlightning
 
-个人博客：推理加速、框架与卸载研究笔记，以及单独的随笔栏目。
+个人博客：推理加速、框架与卸载方向的[学习笔记 Wiki](https://ai-infra-wiki-erx.pages.dev/)，以及单独的随笔栏目。
 
 网站地址：https://depictlightning.github.io
 

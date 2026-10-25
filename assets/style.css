@@ -148,6 +148,8 @@ body.home-page .site-nav a[aria-current] { color: #7a2e2e; }
 @keyframes ice-breath { 0%, 100% { opacity: .72; box-shadow: inset 7px 7px 13px #f4ffed70, inset -7px -10px 15px #1937478c, 0 0 24px 9px #cce7e65c; } 50% { opacity: .92; box-shadow: inset 7px 7px 13px #f4ffed8c, inset -7px -10px 15px #1937478c, 0 0 33px 13px #d4eeea85; } }
 @keyframes ice-glow { 0%, 100% { opacity: .55; } 50% { opacity: .85; } }
 
+.home-credit { max-width: 760px; margin: 2.5rem 0; color: #50615a; font: .9rem/1.9 var(--sans); }
+.home-credit a { color: #886632; text-decoration: underline; text-underline-offset: .2em; }
 body.home-page .site-footer { position: relative; min-height: 170px; border-color: #b5a789; }
 body.home-page .site-footer p { color: #5a5d4c; font: italic 1.08rem var(--serif); letter-spacing: .09em; }
 /* 意象模块：页脚一处极淡的旧血红斑痕。 */
