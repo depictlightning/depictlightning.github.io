@@ -41,7 +41,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
 .archive-heading h1 { margin: 1.4rem 0; font-size: clamp(2.7rem, 5vw, 4.4rem); }
 .archive-heading > p:last-child { color: #536760; font-size: 1.04rem; line-height: 2; }
 .archive-list { margin: 0 0 8rem; }
-/* 意象模块：异闻录的错位档案线与缓慢浮尘，仅装饰页眉留白。 */
+/* 意象模块：技术异闻录的错位档案线与缓慢浮尘，仅装饰页眉留白。 */
 .oddities-archive .archive-heading { position: relative; isolation: isolate; }
 .oddities-archive .archive-heading::before { content: ''; position: absolute; z-index: -1; pointer-events: none; inset: 2.6rem -1rem 1rem; border-left: 1px solid #b08d5738; background: linear-gradient(90deg, #b08d5710, transparent 65%); transform: rotate(-.7deg); }
 .oddities-archive .archive-heading::after { content: ''; position: absolute; z-index: -1; pointer-events: none; inset: 1.5rem 0; opacity: .55; background: radial-gradient(ellipse 2px 3px at 82% 21%, #b08d57 65%, transparent 75%), radial-gradient(ellipse 1px 2px at 93% 46%, #b08d57 65%, transparent 75%), radial-gradient(ellipse 2px 1px at 71% 72%, #b08d57 65%, transparent 75%), radial-gradient(ellipse 1px 2px at 87% 85%, #b08d57 65%, transparent 75%); animation: archive-dust 24s ease-in-out infinite alternate; }
