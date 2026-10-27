@@ -14,15 +14,24 @@ permalink: /essays/
 </blockquote>
 {% assign essay_posts = site.categories.essay %}
 {% if essay_posts.size > 0 %}
-  <div class="entry-list archive-list">
+  <div class="essay-filters" aria-label="筛选随笔" hidden>
+    <button type="button" data-tag="" aria-pressed="true" aria-controls="essay-list">全部</button>
+    {% assign essay_tags = '阅读思考,理论与实践,一些感想' | split: ',' %}
+    {% for tag in essay_tags %}
+      <button type="button" data-tag="{{ tag | escape }}" aria-pressed="false" aria-controls="essay-list">{{ tag | escape }}</button>
+    {% endfor %}
+  </div>
+  <div id="essay-list" class="entry-list archive-list">
     {% for post in essay_posts %}
-      <a class="entry" href="{{ post.url | relative_url }}">
+      <a class="entry" data-tag="{{ post.tags | first | escape }}" href="{{ post.url | relative_url }}">
         <span class="entry-date">{{ post.date | date: '%Y.%m.%d' }}</span>
         <span class="entry-title">{{ post.title | escape }}</span>
         <span class="entry-arrow" aria-hidden="true">↗</span>
       </a>
     {% endfor %}
   </div>
+  <p class="empty-note essay-filter-empty" role="status" hidden>这个标签下暂时还没有随笔。</p>
+  <script src="{{ '/assets/essay-filter.js' | relative_url }}" defer></script>
 {% else %}
   <p class="empty-note">随笔尚未落笔。秋天会为它留一张空白的纸。</p>
 {% endif %}

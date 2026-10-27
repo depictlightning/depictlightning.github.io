@@ -46,6 +46,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
 .essay-epigraph footer { color: var(--muted); font: .82rem/1.6 var(--sans); }
 .essay-epigraph cite { font-style: normal; }
 .essay-epigraph a { border-bottom: 1px solid var(--line); }
+.essay-filters { display: flex; flex-wrap: wrap; gap: .7rem; margin: 0 0 1.8rem; }
+.essay-filters[hidden], .archive-list .entry[hidden] { display: none; }
+.essay-filters button { display: inline-flex; align-items: center; gap: .55rem; border: 1px solid #b9aa90; border-radius: 2px 9px 2px 9px; padding: .55rem 1rem; background: linear-gradient(145deg, #f2eadb, #e6d9c1); box-shadow: 0 3px 9px #473a2212, inset 0 1px #fff8eb80; color: var(--ink); font: 500 .95rem/1.3 var(--serif); letter-spacing: .05em; cursor: pointer; transition: background .5s ease-in-out, border-color .5s ease-in-out, box-shadow .5s ease-in-out; }
+.essay-filters button::before { content: ''; width: .32rem; height: .32rem; flex: none; background: var(--gold); transform: rotate(45deg); }
+.essay-filters button:hover { border-color: var(--gold); box-shadow: 0 4px 12px #473a2226; }
+.essay-filters button[aria-pressed="true"] { background: linear-gradient(135deg, #304a40, #1f3a34); border-color: #1f3a34; color: #fbf5e9; box-shadow: inset 0 0 0 1px #c4a67555, 0 3px 9px #24352e30; }
+.essay-filters button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.essay-filter-empty { margin-bottom: 8rem; }
 /* 意象模块：技术异闻录的错位档案线与缓慢浮尘，仅装饰页眉留白。 */
 .oddities-archive .archive-heading { position: relative; isolation: isolate; }
 .oddities-archive .archive-heading::before { content: ''; position: absolute; z-index: -1; pointer-events: none; inset: 2.6rem -1rem 1rem; border-left: 1px solid #b08d5738; background: linear-gradient(90deg, #b08d5710, transparent 65%); transform: rotate(-.7deg); }

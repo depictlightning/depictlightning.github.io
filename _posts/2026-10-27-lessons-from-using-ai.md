@@ -3,6 +3,7 @@ layout: post
 title: 使用 AI 的几点教训
 date: 2026-10-27
 categories: [essay]
+tags: [理论与实践]
 ---
 
 1. 需要深度思考时，不要依赖 AI 读论文或高质量博客，思考深度会大幅下降。

@@ -3,6 +3,7 @@ layout: post
 title: 一命二运三风水，四积阴德五读书
 date: 2026-10-26
 categories: [essay]
+tags: [一些感想]
 ---
 
 一命二运三风水，四积阴德五读书。六名七相八敬神，九交贵人十养生。
