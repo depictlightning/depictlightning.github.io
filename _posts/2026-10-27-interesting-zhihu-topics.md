@@ -7,8 +7,10 @@ categories: [oddities]
 
 - [作为CS本科生，选择存储系统方向做科研是否合适？](https://www.zhihu.com/question/2004983932375020950/)[^storage]
 - [存储方向的出路是什么？](https://www.zhihu.com/question/1956876400624669581/)[^storage-career]
+- [2026年程序员是不是真的要失业了？](https://www.zhihu.com/question/2009681080479925535/)[^programmer-employment]
 
 ## 参考文献
 
 [^storage]: 《作为CS本科生，选择存储系统方向做科研是否合适？》. 知乎。[原文](https://www.zhihu.com/question/2004983932375020950/)。
 [^storage-career]: 《存储方向的出路是什么？》. 知乎。[原文](https://www.zhihu.com/question/1956876400624669581/)。
+[^programmer-employment]: 《2026年程序员是不是真的要失业了？》. 知乎。[原文](https://www.zhihu.com/question/2009681080479925535/)。
