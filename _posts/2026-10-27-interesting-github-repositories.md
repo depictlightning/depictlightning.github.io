@@ -11,7 +11,12 @@ categories: [oddities]
 
 仓库还提供 `add-resin-model` skill，指导 AI 编程助手适配模型及指定 GPU，并进行正确性和性能验证。[^resin-skill]
 
+## OXR
+
+[SoMarkAI/OXR](https://github.com/SoMarkAI/OXR) 是一个开源文档解析项目，可以将 PDF 和文档图片转换为带有版面坐标的 Markdown 或 JSON。它的版面分析模块可以替换，方便针对不同文档调整解析方式。[^oxr]
+
 ## 参考文献
 
 [^resin]: ekzhang. 《resin》. GitHub。[原文](https://github.com/ekzhang/resin)。
 [^resin-skill]: ekzhang. 《Add a Resin model》. GitHub。[原文](https://github.com/ekzhang/resin/blob/main/skills/add-resin-model/SKILL.md)。
+[^oxr]: SoMark. 《OXR-1.0》. GitHub。[原文](https://github.com/SoMarkAI/OXR)。
