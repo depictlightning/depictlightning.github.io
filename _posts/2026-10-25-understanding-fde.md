@@ -102,3 +102,11 @@ Datawhale 的课程简介采用 6＋X＋1 的组织方式，把核心理论、�
 - [Palantir：Forward Deployed Software Engineer](https://jobs.lever.co/palantir/5168e8fd-fec1-4fea-b7a1-81bdaea65850)：用于核对英文名称与该公司的公开职责描述。
 
 资料查阅日期：2026 年 10 月 25 日。本文为归纳与讨论；具体案例的完整背景、实施边界和效果口径，请以原始材料为准。
+
+## 补充阅读
+
+《学建筑的00后，5天用AI造了座重庆山城！》介绍建筑专业团队如何结合 AI、空间知识与程序化方法制作游戏城市，也分享了 AI 在建筑建模、出图和工具开发中的应用。[^fde补充]
+
+## 参考文献
+
+[^fde补充]: AI+X碰个头. 《学建筑的00后，5天用AI造了座重庆山城！》. 微信公众平台，2026-11-01。[原文](https://mp.weixin.qq.com/s/rYnUlh_aCbHEuxxeNWwd2A)。
