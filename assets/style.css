@@ -37,6 +37,13 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
 .entry-title { font: 500 1.08rem var(--serif); }
 .entry-arrow { text-align: right; }
 .empty-note { margin: 2.1rem 0 0; padding: 2rem; border-left: 2px solid var(--gold); background: #efe9db; color: #596762; }
+.competition-table-wrap { overflow-x: auto; margin: 1rem 0 3rem; }
+.competition-table-wrap table { width: 100%; min-width: 740px; border-collapse: collapse; text-align: left; }
+.competition-table-wrap th, .competition-table-wrap td { padding: 1.15rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.7; }
+.competition-table-wrap thead { background: #efe9db; }
+.competition-table-wrap th { font-size: .9rem; white-space: nowrap; }
+.competition-table-wrap td:first-child { min-width: 14rem; font-weight: 600; }
+.competition-table-wrap a { border-bottom: 1px solid var(--gold); }
 .archive-heading { max-width: 760px; padding: 6.5rem 0 4rem; }
 .archive-heading h1 { margin: 1.4rem 0; font-size: clamp(2.7rem, 5vw, 4.4rem); }
 .archive-heading > p:last-child { color: #536760; font-size: 1.04rem; line-height: 2; }
