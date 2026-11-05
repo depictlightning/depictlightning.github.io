@@ -19,6 +19,7 @@ permalink: /competitions/
 | [NASA Space Apps Challenge 2026](https://www.spaceappschallenge.org/2026/)[^nasa] | 利用开放数据解决地球和太空相关问题 | 2026 年 11 月 15 日赛事结束时 | 11 月 14 日—15 日 |
 | [群核科技 Aholo 全球 3D AI 黑客松](https://www.aholo3d.cn/hackathon)[^aholo] | 使用 Aholo Lux3D 开发 3D AI 创作应用 | 2026 年 11 月 19 日 19:00（北京时间） | 作品截止：2026 年 11 月 19 日 19:00（北京时间） |
 | [Muse Spark Open Kernel Challenge](https://openkernelchallenge.dev/)[^muse] | 在 H200 上优化 GPU 算子，随后优化 SGLang 推理服务 | 2026 年 11 月 20 日 15:59（北京时间） | 算子赛道至 11 月 5 日 15:59；推理服务赛道至 11 月 20 日 15:59（北京时间） |
+| [鲲鹏高性能计算全球挑战赛 S3：华中科技大学专场](/c1b6ffc9a78006f85646a0fd82bc5e8b.jpeg) | 基于鲲鹏计算平台的并行计算性能优化 | 待核实 | 11 月 21 日 9:00—17:00，华中科技大学计算机大楼中心；每队 1—3 人，需自带电脑 |
 | [2026 华为开发者大赛·小红书 Skill 创新赛](https://developer.huaweicloud.com/competition/information/1300000350/circumstance)[^huawei] | 围绕小红书场景开发可复用的 Skill | 2026 年 11 月 24 日 | 待核实 |
 | [九坤投资大模型性能优化挑战赛](https://mp.weixin.qq.com/s/hwwIUs1GL_p89-0ScfkWEQ)[^ubiquant] | CUDA / Triton 单算子优化；初赛前 16 支队伍晋级 | 11 月 27 日 18:00 | 初赛：11 月 29 日 10:00—18:00 |
 | [QNX Global Hackathon](https://qnx.devpost.com/)[^qnx] | 基于 QNX 8.0 开发实时系统、驱动或开发工具 | 2026 年 12 月 16 日 03:00（北京时间） | 11 月 3 日—12 月 16 日（北京时间） |
