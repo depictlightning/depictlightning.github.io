@@ -4,4 +4,7 @@
 /.jekyll-metadata
 /.bundle/
 /vendor/
+/local-notes/
 __pycache__/
+
+/diary/
